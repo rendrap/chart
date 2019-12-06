@@ -1,0 +1,19 @@
+@import './fontawesome/scss/fontawesome.scss';
+@import './fontawesome/scss/solid.scss';
+@import 'general.scss';
+
+.card {
+  margin-bottom: 30px;
+
+  .card-subtitle {
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #bcc3d3;
+  }
+
+  .card-title {
+    position: relative;
+    font-weight: 500;
+  }
+}
+
