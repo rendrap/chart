@@ -6,7 +6,7 @@ dashboard proto
 1. navigate to the root of this project and do `npm install` to install express.js
 
 2. run the Mock API server by running the following in terminal : `node server.js`
-browse to : http://localhost:3001/val
+browse to : http://localhost:3000/val
 (check serve.js shall the endpoint changes)
 to get data for Real time chart in json format :
 

@@ -22,11 +22,14 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function (req, res) {
-  res.send('Hello Seattle\n');
+  res.send('Hello World\n');
 });
-app.listen(3001, function () {
-  console.log('Listening on port 3001...');
-  // server.close(function() { console.log('Doh :('); });
+
+// use port 3000 unless there exists a preconfigured port
+var port = process.env.port || 3000;
+
+var listener = app.listen(port, function () {
+  console.log('Your app is listening on port ' + listener.address().port);
 });
 
 app.get('/val', function (req, res) {
@@ -35,14 +38,10 @@ app.get('/val', function (req, res) {
     return Math.random() * (max - min) + min;
   }
 
-  // var data = [];
   let red_value = getRandomArbitrary(30, 100).toFixed(2);
   let blue_value = getRandomArbitrary(0, 100).toFixed(2);
 
   let data = { red_value, blue_value };
-  // data.push(value);
   console.log(data);
   res.send(JSON.stringify(data));
-  // res.json(data.temp);
-  // res.send(data.toJSON());
 });

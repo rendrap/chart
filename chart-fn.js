@@ -162,7 +162,8 @@ function randomScalingFactor() {
 function onRefresh(chart) {
   $.ajax({
     // url: 'http://pixelprowess.com/i/stream.php',
-    url: 'http://localhost:3001/val',
+    // url: 'http://localhost:3001/val',
+    url: 'https://express-dyn.glitch.me/val',
     dataType: 'json',
     async: true,
     crossDomain: true,
