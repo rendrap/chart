@@ -136,7 +136,7 @@ xhttp.onreadystatechange = function () {
     var values = json.map(function (e) {
       return (e.finalWorth / 1000); // Divide to billions in units of ten
     });
-    MakeChart(labels, values, "Real Time Net Worth"); // Pass in data and call the chart
+    MakeChart(labels, values, "Final worth"); // Pass in data and call the chart
   }
 };
 xhttp.open("GET", "https://forbes400.herokuapp.com/api/forbes400?limit=10", false);
