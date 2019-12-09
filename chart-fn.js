@@ -161,7 +161,8 @@ function randomScalingFactor() {
 // Only works from if the html is served on localhost:3000
 function onRefresh(chart) {
   $.ajax({
-    url: 'http://pixelprowess.com/i/stream.php',
+    // url: 'http://pixelprowess.com/i/stream.php',
+    url: 'http://localhost:3001/val',
     dataType: 'json',
     async: true,
     crossDomain: true,
